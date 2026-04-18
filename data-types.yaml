@@ -1,0 +1,24 @@
+- name: demo om datatypes
+  hosts: local
+  connection: local
+  vars: 
+   program: "Devops with aws" #string
+   Duration: 120 #int
+   IS_LIVE: true #bool
+   Details: #map
+     Months: 04
+     Trainer: "Bhaskarrao"
+   Topics: #list
+    -linux
+    -ansible
+    -docker
+  tasks:
+   - name : print the variables
+     ansible.builtin.debug:
+       msg: |
+        program: {{program}}
+        Duration: {{Duration}}
+        months: {{Months}}
+        Trainer: {{Trainer}}
+        IS live?: {{IS_LIVE}}
+        Topics :{{Topics}}
