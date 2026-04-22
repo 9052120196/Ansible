@@ -1,7 +1,7 @@
 - name: check a number is less than 10 or not
   hosts: local
   connection: local
-  Vars:
+  vars:
      Number_of_sessions: 7
   tasks:
   - name: is ansible sessions more than 5
